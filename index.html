@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="styles.css" <meta="" charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>our ocean</title>
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="education.css">
     </head>
     <body>
         <header>
@@ -21,13 +21,89 @@
 
             <div>
                 <h1>education</h1>
+                    <div>
+                        <video>
+                            <source src="videos/video1.mp4" type="video1/mp4">
+                        </video>
+                    </div>
             </div>
-
 
             <div>
                 <h1>contacts</h1>
 
-            </div>  
+            </div> 
+
+            <tr>
+
+            <div>
+
+                <body>
+                    <button id="education-btn">Education</button>
+
+                    <section id="education-section" class="hidden">
+                        <div class="content">
+                            <button class="tab-btn" data-target="videos">Videos</button>
+                            <button class="tab-btn" data-target="publications">Publications</button>
+                        </div>
+                            <div id="videos" class="tab-content hidden">
+                                <h2>Videos</h2>
+                                 <!-- Add your video content here -->
+                                <p>Video content goes here.</p>
+                            </div>
+
+                            <div id="publications" class="tab-content hidden">
+                                <h2>Publications</h2>
+                                <ul class="publication-list">
+                                    <li>
+                                        <h3>publication 1</h3>
+                                            <p><strong>authur: </strong>auther name</p>
+                                            <p><strong>summary: </strong>this is the summary</p>
+                                            <a href="https://oceanconservancy.org/climate/publications/principles-blue-green-recovery/"</a>
+                                    </li>
+                
+                                    <li>
+                                        <h3>publication 2</h3>
+                                            <p><strong>AUTHOR: </strong>ALI FAKI ALI</p>
+                                            <P><strong>summary: </strong>this is about ocean </P>
+                                            <a href="https://tiktok.com"</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </section>
+
+                </body>
+                
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const educationBtn = document.getElementById('education-btn');
+    const educationSection = document.getElementById('education-section');
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    educationBtn.addEventListener('click', () => {
+        educationSection.classList.toggle('hidden');
+    });
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const targetId = e.target.getAttribute('data-target');
+            tabContents.forEach(content => {
+                if (content.id === targetId) {
+                    content.classList.remove('hidden');
+                } else {
+                    content.classList.add('hidden');
+                }
+            });
+        });
+    });
+});
+
+</script>
+             </div>
+
+
+            </tr>
+
         </main>
         
         
